@@ -56,7 +56,7 @@ export const Achievements = [
 
 export const AchivementsSection = () => {
   return (
-    <div className="py-16">
+    <div id="achievements" className="py-16">
       <div className="max-w-full md:max-w-4xl lg:max-w-[100rem] mx-auto">
         <SectionHeader
           eyebrow="Achivements"

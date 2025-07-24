@@ -41,8 +41,8 @@ export const Header = () => {
               <a href="#home" className="nav-item" onClick={handleNavClick}>
                 Home
               </a>
-              <a href="#projects" className="nav-item" onClick={handleNavClick}>
-                Projects
+              <a href="#achievements" className="nav-item" onClick={handleNavClick}>
+                Achievements
               </a>
               <a href="#about" className="nav-item" onClick={handleNavClick}>
                 About
@@ -75,7 +75,7 @@ export const Header = () => {
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-          <nav className={`p-0.5 border border-white/15 rounded-full ${isScrolled ? 'bg-white/20' : 'bg-white/10'} backdrop-blur-xl transition-all duration-300`}>
+          {/* <nav className={`p-0.5 border border-white/15 rounded-full ${isScrolled ? 'bg-white/20' : 'bg-white/10'} backdrop-blur-xl transition-all duration-300`}>
             <a
               href="https://drive.google.com/file/d/1Ei0oQcsYBWmfvxMsWFEDDRtDYVt_EhFd/view?usp=sharing"
               target="_blank"
@@ -85,7 +85,7 @@ export const Header = () => {
               <span>Resume</span>
               <DownloadIcon className="size-4 ml-2" />
             </a>
-          </nav>
+          </nav> */}
         </div>
 
         {/* Mobile Menu Overlay */}
@@ -101,7 +101,7 @@ export const Header = () => {
             transition-all duration-300 ease-in-out
             ${isMenuOpen ? 'translate-y-0' : '-translate-y-10'}
           `}>
-            {['Home', 'Projects', 'About', 'Contact'].map((item) => (
+            {['Home', 'Achievements', 'About', 'Contact'].map((item) => (
               <a 
                 key={item}
                 href={`#${item.toLowerCase()}`} 
@@ -113,7 +113,7 @@ export const Header = () => {
                   hover:bg-white/20
                 `}
                 style={{
-                  transitionDelay: `${(['Home', 'Projects', 'About', 'Contact'].indexOf(item) * 50)}ms`
+                  transitionDelay: `${(['Home', 'Achievements', 'About', 'Contact'].indexOf(item) * 50)}ms`
                 }}
                 onClick={handleNavClick}
               >

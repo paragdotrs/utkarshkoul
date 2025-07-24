@@ -17,7 +17,6 @@ export const hobbies = [
   { title: "Basketball", emoji: "�", left: "5%", top: "75%" },
   { title: "Movies", emoji: "�", left: "30%", top: "60%" },
   { title: "Learning", emoji: "📚", left: "40%", top: "40%" },
-  { title: "Tech Blogs", emoji: "�", left: "60%", top: "75%" },
 ];
 
 export const AboutSection = () => {
@@ -72,7 +71,7 @@ export const AboutSection = () => {
                 {hobbies.map((hobby) => (
                   <motion.div
                     key={hobby.title}
-                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-indigo-400 to-sky-400 rounded-full py-1.5 absolute"
+                    className="inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-6 bg-gradient-to-r from-indigo-400 to-sky-400 rounded-full py-1 sm:py-1.5 absolute text-xs sm:text-sm"
                     style={{
                       left: hobby.left,
                       top: hobby.top,
@@ -83,7 +82,7 @@ export const AboutSection = () => {
                     <span className="font-medium text-gray-950">
                       {hobby.title}
                     </span>
-                    <span>{hobby.emoji}</span>
+                    <span className="text-xs sm:text-sm">{hobby.emoji}</span>
                   </motion.div>
                 ))}
               </div>
